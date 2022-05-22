@@ -1,0 +1,32 @@
+<small>01:40:00</small>
+<h1 class="center">liste des pokémons</h1>
+<!-- <input 
+#input
+(keyup.enter)="selectPokemon(input.value)"
+type="text"
+/>
+<p *ngIf="pokemonSelected">
+    Vous avez selectionné le pokemon : {{pokemonSelected?.name}}
+</p>
+
+<p *ngIf="!pokemonSelected">
+    Aucun pokemon n'a été trouvé pour. 
+</p> -->
+<div class="container">
+    <div class="row">
+        <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+            <div class="card horizontal" pkmnBorderCard>
+                <div class="card-image">
+                    <img [src]="pokemon.picture" />  
+                </div>
+                <div class="card-tacked">
+                    <div class="card-content">
+                        <p>{{pokemon.name}}</p>
+                        <p><small>{{pokemon.created | date: "dd/MM/yyyy"}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
